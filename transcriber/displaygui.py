@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import tkinter
 import os
 from main import transcribe_audio, initialize_model, select_audio_file, record_audio
 
@@ -10,7 +9,7 @@ selected_file = None
 # Initialize main window
 root = ctk.CTk()
 root.title("Transcriber")
-root.geometry("800x350")  # Made wider to accommodate both panels
+root.geometry("800x500")  # Made wider to accommodate both panels
 ctk.set_appearance_mode("dark")
 
 # Define fonts - Consolas for text, Segoe UI for UI elements
