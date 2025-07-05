@@ -30,18 +30,25 @@ paru -S python-customtkinter
 ```
 
 #### Build and Install from PKGBUILD
-1. Download the PKGBUILD from the releases
-2. Extract and navigate to the directory
-3. Build and install:
+1. Clone the repository:
 ```bash
-makepkg -si
+git clone https://github.com/EdiAsllani/Voice-Transcriber.git
+cd Voice-Transcriber
 ```
 
-#### Alternative: Install from AUR (if available)
+2. Build the package:
 ```bash
-yay -S voice-transcriber
-# OR
-paru -S voice-transcriber
+makepkg -f
+```
+
+3. Install the package:
+```bash
+sudo pacman -U voice-transcriber-1.0.0-1-any.pkg.tar.xz
+```
+
+#### Or build and install in one step:
+```bash
+makepkg -si
 ```
 
 ### Other Linux Distributions
@@ -105,7 +112,7 @@ python3 transcriber/displaygui.py
 
 3. **View Results**: Transcribed text will appear in the text area.
 
-4. **Save Results**: Copy the text or save it to a file as needed.
+4. **Save Results**: Copy the text as needed.
 
 ## Supported Audio Formats
 
@@ -127,7 +134,6 @@ python3 transcriber/displaygui.py
 - 8GB RAM or more
 - 4GB free disk space
 - Good quality microphone
-- GPU with CUDA support (for faster transcription)
 
 ## Troubleshooting
 
@@ -139,17 +145,10 @@ python3 transcriber/displaygui.py
 
 #### Audio Recording Issues
 - Check microphone permissions
-- Ensure PortAudio is properly installed
-- On Linux, you might need to install `pulseaudio-dev` or `alsa-dev`
+- Ensure PyAudio is installed correctly
 
 #### GUI Not Appearing
-- Ensure tkinter is installed
-- Try: `python3 -m tkinter` to test tkinter installation
-
-#### Slow Transcription
-- Consider using a GPU-accelerated version of faster-whisper
-- Close other applications to free up system resources
-- Use shorter audio files for testing
+- Ensure customtkinter & tkinter are installed correctly
 
 ### Getting Help
 
