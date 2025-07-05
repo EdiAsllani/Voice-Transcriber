@@ -49,3 +49,9 @@ Thumbs.db
 
 # PyInstaller
 *.spec
+
+id_rsa
+id_rsa.pub
+.ssh/
+*.pem
+*.key
